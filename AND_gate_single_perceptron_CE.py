@@ -13,10 +13,10 @@ def d_sigmoid(output):
 x = np.array([[0,0], [0,1], [1,0], [1,1]])
 y = np.array([0,0,0,1])
 weights = np.array([6,6], dtype=float)
-bias = -9.0
+bias = 1.0
 learning_rate = 0.1
 
-def train_perceptron(x, y, weights, bias, learning_rate=0.1, epochs=300000):
+def train_perceptron(x, y, weights, bias, learning_rate=0.1, epochs=2000):
     for epoch in range(epochs):
         z = np.dot(x, weights) + bias
         predictions = sigmoid(z)
